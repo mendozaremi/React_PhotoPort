@@ -1,13 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import SimpleMenu from './nav'
+import NavBar from './NavBar'
 
 const App = () =>{
   return (
     <div className="App">
-      <SimpleMenu/>
-    <h1>React Photography Portfolio</h1>
+      <NavBar/>
     </div>
   );
 }
