@@ -1,12 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import NavBar from './NavBar'
+import NavBar from './Components/NavBar'
+import Album from './Components/PhotoAlbum'
 
 const App = () =>{
   return (
     <div className="App">
       <NavBar/>
+      <Album/>
     </div>
   );
 }
