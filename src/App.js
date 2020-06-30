@@ -18,11 +18,11 @@ const App = () =>{
   return (
     <div className="App">
        <NavBar/>
-      <Grid container spacing={4} className={classes.gridContainer}>
-        <Grid item xs={12} sm={6} md={4}>
+      {/* <Grid container spacing={4} className={classes.gridContainer}>
+        <Grid tem xs={12} sm={6} md={4}> */}
           <Album/>
-        </Grid>
-      </Grid>
+        {/* </Grid>
+      </Grid> */}
     </div>
   );
 }
