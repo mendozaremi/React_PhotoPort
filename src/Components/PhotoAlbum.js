@@ -1,141 +1,200 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
+import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
+import Box from '@material-ui/core/Box';
+import Grid from '@material-ui/core/Grid'
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
+import Color from 'color';
+
+const useStyles = makeStyles({
+  root: {
+    minWidth: 200,
+    maxWidth: 345,
+  },
+  gridContainer: {
+    paddingLeft: '20px',
+    paddingRight: '20px',
+    paddingTop: '100px'
+  },
+  cardGrid: {
+    paddingTop: '100px',
+    paddingBottom: '100px',
+    paddingLeft: '20px',
+    paddingRight: '20px',
+},
+  cardMedia: {
+    paddingTop: '100%', // 16:9
+    paddingBottom: '40%'
+  },
+  card: ({ color }) => ({
+    minWidth: 256,
+    boxShadow: 'none',
+    '&:hover': {
+      boxShadow: `0 6px 12px 0 ${Color(color)
+        .rotate(-12)
+        .darken(0.2)
+        .fade(0.5)}`,
+        transition: '0.2s',
+        '&:hover': {
+          transform: 'scale(1.1)',
+      },
+    },
+    
+  }),
+});
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+      {'Copyright © Remi Mendoza '}
+      <Link color="inherit" href="https://mendozaremi.github.io/portfolio/">
+        Visit My Website
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
     </Typography>
   );
 }
-
-const useStyles = makeStyles((theme) => ({
-  icon: {
-    marginRight: theme.spacing(2),
-  },
-  heroContent: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(8, 0, 6),
-  },
-  heroButtons: {
-    marginTop: theme.spacing(4),
-  },
-  cardGrid: {
-    paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8),
-  },
-  card: {
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  cardMedia: {
-    paddingTop: '56.25%', // 16:9
-  },
-  cardContent: {
-    flexGrow: 1,
-  },
-  footer: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(5),
-  },
-}));
-
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-// #efefef
 export default function Album() {
   const classes = useStyles();
 
   return (
     <React.Fragment>
-      <CssBaseline />
       <main>
-        {/* Hero unit */}
-        <div className={classes.heroContent} style={{backgroundColor: "#efefef"}}>
-          <Container maxWidth="sm" >
-            <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-              Album layout
-            </Typography>
-            <Typography variant="h5" align="center" color="textSecondary" paragraph>
-              Something short and leading about the collection below—its contents, the creator, etc.
-              Make it short and sweet, but not too short so folks don&apos;t simply skip over it
-              entirely.
-            </Typography>
-            <div className={classes.heroButtons}>
-              <Grid container spacing={2} justify="center">
-                <Grid item>
-                  <Button variant="contained" color="primary">
-                    Main call to action
-                  </Button>
+          <Container className={classes.cardGrid} maxWidth="md">
+            {/* FIRST IMG */}
+            <Grid container spacing={8}>
+        
+                <Grid item xs={12} sm={6} md={4}>
+                  <Card className={classes.card}>
+                    <CardMedia
+                      className={classes.cardMedia}
+                      image="https://i.imgur.com/QCRdpZc.jpg"
+                    />
+                  </Card>
                 </Grid>
-                <Grid item>
-                  <Button variant="outlined" color="primary">
-                    Secondary action
-                  </Button>
+                {/* SECOND IMG */}
+                <Grid item xs={12} sm={6} md={4}>
+                  <Card className={classes.card}>
+                    <CardMedia
+                      className={classes.cardMedia}
+                      image="https://i.imgur.com/yxAq4Bd.jpg"
+                    />
+                  </Card>
                 </Grid>
-              </Grid>
-            </div>
+                {/* THIRD IMG */}
+                <Grid item xs={12} sm={6} md={4}>
+                  <Card className={classes.card}>
+                    <CardMedia
+                      className={classes.cardMedia}
+                      image="https://i.imgur.com/0rCL5tW.jpg"
+                    />
+                  </Card>
+                </Grid>
+                {/* FOURTH IMG */}
+                <Grid item xs={12} sm={6} md={4}>
+                  <Card className={classes.card}>
+                    <CardMedia
+                      className={classes.cardMedia}
+                      image="https://i.imgur.com/ONzJjZ1.jpg"
+                    />
+                  </Card>
+                </Grid>
+                {/* FIFTH IMG */}
+                <Grid item xs={12} sm={6} md={4}>
+                  <Card className={classes.card}>
+                    <CardMedia
+                      className={classes.cardMedia}
+                      image="https://i.imgur.com/sL5cVmz.jpg"
+                    />
+                  </Card>
+                </Grid>
+                {/* SIXTH IMG */}
+                <Grid item xs={12} sm={6} md={4}>
+                  <Card className={classes.card}>
+                    <CardMedia
+                      className={classes.cardMedia}
+                      image="https://i.imgur.com/iGuoAbO.jpg"
+                    />
+                  </Card>
+                </Grid>
+                   {/* SEVENTH IMG */}
+                   <Grid item xs={12} sm={6} md={4}>
+                  <Card className={classes.card}>
+                    <CardMedia
+                      className={classes.cardMedia}
+                      image="https://i.imgur.com/BCfyZ3n.jpg"
+                    />
+                  </Card>
+                </Grid>
+                   {/* EIGHT IMG */}
+                   <Grid item xs={12} sm={6} md={4}>
+                  <Card className={classes.card}>
+                    <CardMedia
+                      className={classes.cardMedia}
+                      image="https://i.imgur.com/W6hXRKe.jpg"
+                    />
+                  </Card>
+                </Grid>
+                   {/* NINTH IMG */}
+                   <Grid item xs={12} sm={6} md={4}>
+                  <Card className={classes.card}>
+                    <CardMedia
+                      className={classes.cardMedia}
+                      image="https://i.imgur.com/UcEuEph.jpg"
+                    />
+                  </Card>
+                </Grid>
+                    {/* TENTH IMG */}
+                    <Grid item xs={12} sm={6} md={4}>
+                  <Card className={classes.card}>
+                    <CardMedia
+                      className={classes.cardMedia}
+                      image="https://i.imgur.com/2Bi8OBk.jpg"
+                    />
+                  </Card>
+                </Grid>
+                    {/* ELEVENTH IMG */}
+                    <Grid item xs={12} sm={6} md={4}>
+                  <Card className={classes.card}>
+                    <CardMedia
+                      className={classes.cardMedia}
+                      image="https://i.imgur.com/LrcJl9N.jpg"
+                    />
+                  </Card>
+                </Grid>
+                    {/* TWENTH IMG */}
+                    <Grid item xs={12} sm={6} md={4}>
+                  <Card className={classes.card}>
+                    <CardMedia
+                      className={classes.cardMedia}
+                      image="https://i.imgur.com/tLQIT2f.jpg"
+                    />
+                  </Card>
+                </Grid>
+                
+            </Grid>
           </Container>
-        </div>
-        <Container className={classes.cardGrid} maxWidth="md">
-          {/* End hero unit */}
-          <Grid container spacing={4}>
-            {cards.map((card) => (
-              <Grid item key={card} xs={12} sm={6} md={4}>
-                <Card className={classes.card}>
-                  <CardMedia
-                    className={classes.cardMedia}
-                    image="https://source.unsplash.com/random"
-                    title="Image title"
-                  />
-                  <CardContent className={classes.cardContent}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Heading
-                    </Typography>
-                    <Typography>
-                      This is a media card. You can use this section to describe the content.
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      View
-                    </Button>
-                    <Button size="small" color="primary">
-                      Edit
-                    </Button>
-                  </CardActions>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-        </Container>
-      </main>
-      {/* Footer */}
-      <footer className={classes.footer} style={{backgroundColor: "#bdbdbd"}}>
-        <Typography variant="h6" align="center" gutterBottom>
-          REMI MENDOZA
-        </Typography>
-        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-        "Your most important gear is your eye, heart, and soul" - Marius Vieth
-        </Typography>
-        <Copyright />
-      </footer>
-      {/* End footer */}
+        </main>
+        {/* Footer */}
+        <footer className={classes.footer}>
+          <Typography variant="h6" align="center" gutterBottom>
+            Footer
+          </Typography>
+          <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
+            Something here to give the footer a purpose!
+          </Typography>
+          <Copyright />
+        </footer>
+        {/* End footer */}
     </React.Fragment>
+    
   );
 }
