@@ -8,7 +8,7 @@ This is a Photography portfolio I created using Material UI.
 You can Fork My Repo and Adjust to your needs to create your own simple Photography site.
 
 # Preview
-<div style='position:relative; padding-bottom:calc(84.96% + 44px)'><iframe src='https://gfycat.com/ifr/ConstantFeminineBighornsheep' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div>
+![giphy](https://user-images.githubusercontent.com/47014638/86285369-7897ab80-bbb2-11ea-8206-639d6e5f49d1.gif)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
