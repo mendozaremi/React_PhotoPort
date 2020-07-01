@@ -1,10 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# Remi Mendoza Material UI Photography Portfolio
+# Material UI Photography Portfolio
 This is a Photography portfolio I created using Material UI.
 
 ## Usage
-
 You can Fork My Repo and Adjust to your needs to create your own simple Photography site.
 
 # Preview
