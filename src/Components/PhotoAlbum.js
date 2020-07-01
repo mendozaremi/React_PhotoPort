@@ -1,17 +1,15 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid'
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 import Color from 'color';
+import Box from '@material-ui/core/Box';
+
+//==============================================================================================
 
 const useStyles = makeStyles({
   root: {
@@ -48,7 +46,19 @@ const useStyles = makeStyles({
     },
     
   }),
+  footer: {
+    flexGrow: 1,
+    fontSize: '2.5rem',
+    '@media (min-width:600px)': {
+      fontSize: '0.8rem',
+    },
+    '@media (max-width:599px)': {
+      fontSize: '0.1rem',
+    }
+  }
 });
+
+//========================================COPYRIGHT===============================================
 
 function Copyright() {
   return (
@@ -62,6 +72,8 @@ function Copyright() {
     </Typography>
   );
 }
+//==========================================ALBUM=============================================
+
 export default function Album() {
   const classes = useStyles();
 
@@ -179,22 +191,50 @@ export default function Album() {
                     />
                   </Card>
                 </Grid>
-                
+                 {/* THIRTEENTH IMG */}
+                 <Grid item xs={12} sm={6} md={4}>
+                  <Card className={classes.card}>
+                    <CardMedia
+                      className={classes.cardMedia}
+                      image="https://i.imgur.com/1P8WIBT.jpg"
+                    />
+                  </Card>
+                </Grid>
+                 {/* FOURTEENTH IMG */}
+                 <Grid item xs={12} sm={6} md={4}>
+                  <Card className={classes.card}>
+                    <CardMedia
+                      className={classes.cardMedia}
+                      image="https://i.imgur.com/y1MCgtu.jpg"
+                    />
+                  </Card>
+                </Grid>
+                 {/* FIFTHTEENTH IMG */}
+                 <Grid item xs={12} sm={6} md={4}>
+                  <Card className={classes.card}>
+                    <CardMedia
+                      className={classes.cardMedia}
+                      image="https://i.imgur.com/rTnP5ly.jpg"
+                    />
+                  </Card>
+                </Grid>
             </Grid>
           </Container>
         </main>
-        {/* Footer */}
-        <footer className={classes.footer}>
-          <Typography variant="h6" align="center" gutterBottom>
-            Footer
+    {/* Footer */}	
+    <footer className={classes.footer} style={{backgroundColor: "#bdbdbd"}}>	
+          <Typography variant="h6" className={classes.title} style={{color: "#494949"}}>
+            <Box letterSpacing={10}  m={1}>
+              R E M I  M E N D O Z A
+            </Box>
           </Typography>
-          <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-            Something here to give the footer a purpose!
-          </Typography>
-          <Copyright />
-        </footer>
-        {/* End footer */}
+        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">	
+        "Your most important gear is your eye, heart, and soul" - Marius Vieth	
+        </Typography>	
+        <Copyright />	
+    </footer>	
+      {/* End footer */}
     </React.Fragment>
-    
   );
 }
+//==============================================================================================
