@@ -5,7 +5,7 @@ public class Music extends ServiceCommunicator{
     }
     
     public static void main(String[] argv) {
-        System.out.println(" <------ TEST OF MUSIC.JAVA ------>")
+        System.out.println(" <------ TEST OF MUSIC.JAVA ------>");
         System.out.println(new Music("Drake").get());
     }
 }

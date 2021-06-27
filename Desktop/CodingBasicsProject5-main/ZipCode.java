@@ -6,7 +6,7 @@ public class ZipCode extends ServiceCommunicator{
     }
 
     public static void main(String[] argv) {
-       System.out.println(" <------ TEST OF ZIPCODE.JAVA ------>")
+       System.out.println(" <------ TEST OF ZIPCODE.JAVA ------>");
        System.out.println(new ZipCode("10040").get());
       }
 }
